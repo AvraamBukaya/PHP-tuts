@@ -1,44 +1,45 @@
-<?php
-// conditional statements
+<!-- <?php
+        // conditional statements
 
-// $price = 40;
+        // $price = 40;
 
-// if ($price < 40) {
-//     echo 'conditional met';
-// } else if ($price == 40) {
-//     echo 'elseif conditional met';
-// } else echo 'conditional not met';
-// || or operator 
-// && and operator
+        // if ($price < 40) {
+        //     echo 'conditional met';
+        // } else if ($price == 40) {
+        //     echo 'elseif conditional met';
+        // } else echo 'conditional not met';
+        // || or operator 
+        // && and operator
 
-$products = [
-    ['name' => 'poteto', 'price' => 3.0, 'type' => 'organic'],
-    ['name' => 'banana skin', 'price' => 2.5, 'type' => 'organic'],
-    ['name' => 'lightning bolt', 'price' => 40],
-    ['name' => 'melon', 'price' => 90, 'type' => 'organic'],
-    ['name' => 'lemon', 'price' => 50, 'type' => 'organic'],
-    ['name' => 'l', 'price' => 40, 'type' => 'organic']
-];
+        // $products = [
+        //     ['name' => 'poteto', 'price' => 3.0, 'type' => 'organic'],
+        //     ['name' => 'banana skin', 'price' => 2.5, 'type' => 'organic'],
+        //     ['name' => 'lightning bolt', 'price' => 40],
+        //     ['name' => 'melon', 'price' => 90, 'type' => 'organic'],
+        //     ['name' => 'lemon', 'price' => 50, 'type' => 'organic'],
+        //     ['name' => 'l', 'price' => 40, 'type' => 'organic']
+        // ];
 
-foreach ($products as $product) {
-    if ($product['price'] < 10 ||  $product['price'] > 2.5) {
-        echo $product['name'] . '<br>';
-    } else echo 'The product ' . $product['name'] . ' expenseive' . '<br>';
-}
+        // foreach ($products as $product) {
+        //     if ($product['price'] < 10 ||  $product['price'] > 2.5) {
+        //         echo $product['name'] . '<br>';
+        //     } else echo 'The product ' . $product['name'] . ' expenseive' . '<br>';
+        // }
 
 
-// define('PI', 3.14);
-// echo PI . "\r\n";
+        // define('PI', 3.14);
+        // echo PI . "\r\n";
 
-// $name = 'Avraham';
-// $lname = " Bukaya";
+        // $name = 'Avraham';
+        // $lname = " Bukaya";
 
-// //echo $stringOne . $stringTwo;
-// //echo 'My name is ' . $stringOne . $stringTwo;
-// //echo "My Name is $stringOne  $stringTwo";
-// //echo strlen($name);
-// // echo 'Tupac scream \"Thug Life\"';
-?>
+        // //echo $stringOne . $stringTwo;
+        // //echo 'My name is ' . $stringOne . $stringTwo;
+        // //echo "My Name is $stringOne  $stringTwo";
+        // //echo strlen($name);
+        // // // echo 'Tupac scream \"Thug Life\"';
+        // 
+        ?> -->
 
 
 <html lang="en">
