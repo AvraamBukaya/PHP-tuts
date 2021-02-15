@@ -5,9 +5,9 @@
 //     echo $_GET['ingredients'];
 // }
 if (isset($_POST['submit'])) {
-    echo $_POST['email'];
-    echo $_POST['title'];
-    echo $_POST['ingredients'];
+    echo htmlspecialchars($_POST['email']);
+    echo htmlspecialchars($_POST['title']);
+    echo htmlspecialchars($_POST['ingredients']);
 }
 
 ?>
@@ -20,7 +20,7 @@ if (isset($_POST['submit'])) {
 
 <section class="container grey-text">
     <h4 class="center">Add Pizza</h4>
-    <form class="white" action="add.php" method="POST">
+    <form class="white" action="server.php" method="POST">
 
         <label for="">Your Email:</label>
         <input type="email" name="email">
