@@ -18,16 +18,16 @@ include 'server.php';
     <form class="white" action="add.php" method="POST">
 
         <label for="">Your Email:</label>
-        <input type="email" name="email" value=<?php echo $email ?>>
+        <input type="email" name="email" value=<?php echo htmlspecialchars($email) ?>>
         <div class="red-text"><?php echo $errors['email']; ?></div>
 
         <label for="">Pizza Title</label>
-        <input type="text" name="title" value=<?php echo $pizza_title; ?>>
+        <input type="text" name="title" value=<?php echo htmlspecialchars($pizza_title); ?>>
         <div class="red-text"><?php echo $errors['title']; ?></div>
 
 
         <label for="">ingredients (comma separated):</label>
-        <input type="text" name="ingredients" value=<?php echo $ingredients; ?>>
+        <input type="text" name="ingredients" value=<?php echo htmlspecialchars($ingredients); ?>>
         <div class="red-text"><?php echo $errors['ingredients']; ?></div>
 
         <div class="center">
