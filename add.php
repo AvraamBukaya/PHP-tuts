@@ -15,7 +15,7 @@ include 'server.php';
 
 <section class="container grey-text">
     <h4 class="center">Add Pizza</h4>
-    <form class="white" action="add.php" method="GET">
+    <form class="white" action="app.php" method="GET">
 
         <label for="">Your Email:</label>
         <input type="email" name="email" value=<?php echo $email ?>>

@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<?php include('server.php') ?>
-<?php include('templates/header.php') ?>
-<?php include('templates/footer.php') ?>
-
 <?php
+include 'server.php';
 
 $host = 'localhost';
 $user_name = 'Avraham';
@@ -31,11 +26,39 @@ mysqli_free_result($result);
 //Close connection to the database
 mysqli_close($connectionToDatabase);
 
-print_r($pizzas);
-
+//print_r($pizzas);
 
 ?>
 
 
+<!DOCTYPE html>
+<html lang="en">
 
-</html>
+<?php include('templates/header.php'); ?>
+
+
+<h4 class="center grey-text">Pizzas!</h4>
+
+<div class="container">
+
+    <?php foreach ($pizzas as $pizza) { ?>
+
+
+        <div class="col s6 m3">
+            <div class="card z-depth-0">
+                <div class="card-content center">
+                    <h6> <?php echo 'Pizza Type: ' . htmlspecialchars($pizza['title']); ?></h6>
+                    <div><?php echo 'The Ingredients are: ' . htmlspecialchars($pizza['ingredients']) ?></div>
+                </div>
+                <div class="card-action right-align center">
+                    <a class="brand-text" href="#">More Info</a>
+                </div>
+            </div>
+        </div>
+
+
+    <?php } ?>
+
+    <?php include('templates/footer.php'); ?>
+
+</div>
