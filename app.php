@@ -41,18 +41,18 @@ mysqli_close($connectionToDatabase);
 
 <div class="container">
 
-    <?php foreach ($pizzas as $pizza) { ?>
+    <?php foreach ($pizzas as $pizza) : ?>
 
 
-        <div class="col s6 m3">
+        <div class="col s6 md3">
             <div class="card z-depth-0">
                 <div class="card-content center">
                     <h6> <?php echo 'Pizza Type:  ' . htmlspecialchars($pizza['title']); ?></h6>
                     <div>
                         <ul>
-                            <?php foreach (explode(',', $pizza['ingredients']) as $ingredient) { ?>
+                            <?php foreach (explode(',', $pizza['ingredients']) as $ingredient) : ?>
                                 <li> <?php echo htmlspecialchars($ingredient) ?></li>
-                            <?php } ?>
+                            <?php endforeach; ?>
                         </ul>
                     </div>
                 </div>
@@ -63,7 +63,12 @@ mysqli_close($connectionToDatabase);
         </div>
 
 
-    <?php } ?>
+    <?php endforeach; ?>
+    <?php if (count($pizzas) >= 3) : ?>
+        <p>There are 3 or more pizzas</p>
+    <?php else : ?>
+        <p>There are less than 3 pizzas</p>
+    <?php endif; ?>
 
     <?php include('templates/footer.php'); ?>
 
