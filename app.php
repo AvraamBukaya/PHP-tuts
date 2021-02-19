@@ -47,8 +47,14 @@ mysqli_close($connectionToDatabase);
         <div class="col s6 m3">
             <div class="card z-depth-0">
                 <div class="card-content center">
-                    <h6> <?php echo 'Pizza Type: ' . htmlspecialchars($pizza['title']); ?></h6>
-                    <div><?php echo 'The Ingredients are: ' . htmlspecialchars($pizza['ingredients']) ?></div>
+                    <h6> <?php echo 'Pizza Type:  ' . htmlspecialchars($pizza['title']); ?></h6>
+                    <div>
+                        <ul>
+                            <?php foreach (explode(',', $pizza['ingredients']) as $ingredient) { ?>
+                                <li> <?php echo htmlspecialchars($ingredient) ?></li>
+                            <?php } ?>
+                        </ul>
+                    </div>
                 </div>
                 <div class="card-action right-align center">
                     <a class="brand-text" href="#">More Info</a>
