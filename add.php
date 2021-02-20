@@ -4,21 +4,23 @@
 //     echo $_GET['title'];
 //     echo $_GET['ingredients'];
 // }
-include 'server.php';
+
+
 ?>
 
 
 <!DOCTYPE html>
 <html lang="en">
-<?php include('templates/header.php') ?>
-
+<?php
+include 'templates/header.php';
+include 'server.php'; ?>
 
 <section class="container grey-text">
     <h4 class="center">Add Pizza</h4>
-    <form class="white" action="app.php" method="GET">
+    <form class="white" action="add.php" method="GET">
 
         <label for="">Your Email:</label>
-        <input type="email" name="email" value=<?php echo $email ?>>
+        <input type="email" name="email" value=<?php echo htmlspecialchars($email); ?>>
         <div class="red-text"><?php echo htmlspecialchars($errors['email']); ?></div>
 
         <label for="">Pizza Title</label>
@@ -36,6 +38,7 @@ include 'server.php';
         </div>
 
     </form>
+
 
 </section>
 

@@ -1,12 +1,7 @@
 <?php
-include 'server.php';
 
-$host = 'localhost';
-$user_name = 'Avraham';
-$password = 'ab1991';
-$database_name = 'pizza_app';
+include('config/db_connect.php');
 
-$connectionToDatabase = connectToDatabase($host, $user_name, $password, $database_name);
 
 //Write Query for all the pizza
 

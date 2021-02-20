@@ -20,7 +20,7 @@
 <body class="grey lighten-4">
     <nav class="white z-depth-0">
         <div class="container">
-            <a href="#" class="brand-log brand-text">Pizza Linda</a>href
+            <a href="app.php" class="brand-log brand-text">Pizza Linda</a>href
             <ul id="nav-mobile" class="right hide-on-small-and-down">
                 <li><a href="add.php" class="btn brand z-depth-0">Add Pizza</a></li>
             </ul>
